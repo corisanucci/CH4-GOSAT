@@ -32,6 +32,7 @@ rstack <- stack(lista.r)
 # Me quedo con la parte que me interesa del nombre para generar un indice por años
 fechas <- substr(names(rstack), 7, 14)%>%ymd()
 indx <- format(fechas, '%Y')%>%as.numeric()
+# Para analisis interanual usar: format(fechas, '%m')
 
 # Asigno el indice como nombre de las capas al stack
 names(rstack) <- indx
